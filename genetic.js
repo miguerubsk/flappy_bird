@@ -185,7 +185,7 @@ return this.random(0, 1) == 1 ? parentA : parentB;
 	// mutates a gene
 	mutate : function (gene){
 		if (Math.random() < this.mutateRate) {
-			var mutateFactor = 1 + ((Math.random() - 0.5) * 3 + (Math.random() - 0.5));
+			var mutateFactor = 3 + ((Math.random() - 0.5) * 3 + Math.random()* (Math.random() - Math.random()));
 			gene *= mutateFactor;
 		}
 		
